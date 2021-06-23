@@ -8,6 +8,15 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+.whats {
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  width: 60px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
 .header {
   display:flex;
   justify-content: space-between;
@@ -92,18 +101,19 @@ html, body {
       .info {
         display: flex;
         flex-direction: column;
-        width: 400px;
+        width: 500px;
         margin: 50px;
         font-family: 'Poppins', sans-serif;
         color: white;
 
         h2 {
+          font-size: 50px;
           letter-spacing: 1.5px;
         }
 
         p {
-          background: rgba(0, 0, 0, 0.5);
           padding: 5px;
+          font-size: 20px;
         }
       }
     }
@@ -142,24 +152,48 @@ html, body {
 
 .typesOfPlans {
   display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 30px 50px;
+
+  .title {
+    text-align: center;
+    margin: 30px;
+    font-size: 30px;
+
+    &:after {
+      content: '';
+      display: block;
+      margin: 5px auto;
+      width: 300px;
+      height: 4px;
+      background: rgb(17, 17, 156);
+    }
+  }
 
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
 
     .type {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
+      position: relative;
       width: 30%;
       height: 650px;
       padding: 15px;
+      margin: 0 10px;
       border-radius: 5px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    img {
+      width: 100%;
     }
 
     h2 {
@@ -178,6 +212,8 @@ html, body {
       border-radius: 5px;
       background: rgb(12, 12, 68);
       margin: 20px;
+      position: absolute;
+      bottom: 10px;
 
       &:hover {
         opacity: 0.9;
@@ -192,10 +228,107 @@ html, body {
   }
 }
 
+.car_plans{
+
+  .title {
+    text-align: center;
+    margin: 30px;
+    font-size: 30px;
+
+    &:after {
+      content: '';
+      display: block;
+      margin: 5px auto;
+      width: 300px;
+      height: 4px;
+      background: rgb(17, 17, 156);
+    }
+  }
+
+  .carousel {
+    display: flex;
+    width: 100%;
+  
+    ul {
+      display: flex;
+      overflow: hidden;
+  
+      li {
+        list-style: none;
+        margin: 10px;
+      }
+    }
+  }
+}
+
+
+.cto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  margin: 50px 0;
+  background: url('../img/call-to-action.jpg');
+  color: white;
+
+  h2 {
+    font-size: 50px;
+    margin: 10px;
+  }
+
+  h4 {
+    font-size: 25px;
+    margin: 10px;
+  }
+
+  .buttons {
+    display: flex;
+    margin: 10px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      margin: 5px;
+      width: 200px;
+      height: 50px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 17px;
+      padding: 5px;
+      background-color: orangered;
+      color: white;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
 .history {
   width: 100%;
   padding: 30px 0;
   font-family: 'Poppins', sans-serif;
+
+  .title {
+    text-align: center;
+    margin: 0 0 30px 0;
+    font-size: 30px;
+
+    &:after {
+      content: '';
+      display: block;
+      margin: 5px auto;
+      width: 300px;
+      height: 4px;
+      background: rgb(17, 17, 156);
+    }
+  }
 
   .container {
     position: relative;
@@ -221,7 +354,7 @@ html, body {
       padding: 30px 50px;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.7);
       color: white;
     }
 
@@ -262,6 +395,10 @@ html, body {
           font-family: 'Poppins', sans-serif;
           font-size: 20px;
         }
+
+        span {
+          font-size: 13px;
+        }
       }
   
       .openingHours {
@@ -272,11 +409,16 @@ html, body {
           font-family: 'Poppins', sans-serif;
           font-size: 20px;
         }
+
+        span {
+          font-size: 13px;
+        }
       }
     }
   
     .branches {
       display: flex;
+      align-items: center;
       flex-direction: column;
       width: 30%;
 
@@ -284,10 +426,25 @@ html, body {
         font-family: 'Poppins', sans-serif;
         font-size: 20px;
       }
+
+      span {
+        font-size: 15px;
+        margin: 3px 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          border-bottom: 1px solid white;
+        }
+      }
     }
   
     .social {
       display: flex;
+      align-items: center;
       flex-direction: column;
       width: 30%;
       font-size: 20px;

@@ -9,6 +9,15 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+.whats {
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  width: 60px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -122,19 +131,20 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 400px;
+  width: 500px;
   margin: 50px;
   font-family: 'Poppins', sans-serif;
   color: white;
 }
 
 .sliderContainer .slide .wrapper .info h2 {
+  font-size: 50px;
   letter-spacing: 1.5px;
 }
 
 .sliderContainer .slide .wrapper .info p {
-  background: rgba(0, 0, 0, 0.5);
   padding: 5px;
+  font-size: 20px;
 }
 
 .sliderContainer .slide.active {
@@ -180,8 +190,27 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   padding: 30px 50px;
+}
+
+.typesOfPlans .title {
+  text-align: center;
+  margin: 30px;
+  font-size: 30px;
+}
+
+.typesOfPlans .title:after {
+  content: '';
+  display: block;
+  margin: 5px auto;
+  width: 300px;
+  height: 4px;
+  background: #11119c;
 }
 
 .typesOfPlans .container {
@@ -194,6 +223,9 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
 }
 
 .typesOfPlans .container .type {
@@ -210,12 +242,18 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   width: 30%;
   height: 650px;
   padding: 15px;
+  margin: 0 10px;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.typesOfPlans .container img {
+  width: 100%;
 }
 
 .typesOfPlans .container h2 {
@@ -234,6 +272,8 @@ html, body {
   border-radius: 5px;
   background: #0c0c44;
   margin: 20px;
+  position: absolute;
+  bottom: 10px;
 }
 
 .typesOfPlans .container button:hover {
@@ -247,10 +287,124 @@ html, body {
   color: white;
 }
 
+.car_plans .title {
+  text-align: center;
+  margin: 30px;
+  font-size: 30px;
+}
+
+.car_plans .title:after {
+  content: '';
+  display: block;
+  margin: 5px auto;
+  width: 300px;
+  height: 4px;
+  background: #11119c;
+}
+
+.car_plans .carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.car_plans .carousel ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.car_plans .carousel ul li {
+  list-style: none;
+  margin: 10px;
+}
+
+.cto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 400px;
+  margin: 50px 0;
+  background: url("../img/call-to-action.jpg");
+  color: white;
+}
+
+.cto h2 {
+  font-size: 50px;
+  margin: 10px;
+}
+
+.cto h4 {
+  font-size: 25px;
+  margin: 10px;
+}
+
+.cto .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+}
+
+.cto .buttons a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  margin: 5px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 5px;
+  background-color: orangered;
+  color: white;
+}
+
+.cto .buttons a:hover {
+  opacity: 0.9;
+}
+
 .history {
   width: 100%;
   padding: 30px 0;
   font-family: 'Poppins', sans-serif;
+}
+
+.history .title {
+  text-align: center;
+  margin: 0 0 30px 0;
+  font-size: 30px;
+}
+
+.history .title:after {
+  content: '';
+  display: block;
+  margin: 5px auto;
+  width: 300px;
+  height: 4px;
+  background: #11119c;
 }
 
 .history .container {
@@ -296,7 +450,7 @@ html, body {
   padding: 30px 50px;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
 }
 
@@ -362,6 +516,10 @@ html, body {
   font-size: 20px;
 }
 
+.footer .container .informations .adress span {
+  font-size: 13px;
+}
+
 .footer .container .informations .openingHours {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -377,10 +535,17 @@ html, body {
   font-size: 20px;
 }
 
+.footer .container .informations .openingHours span {
+  font-size: 13px;
+}
+
 .footer .container .branches {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -393,10 +558,27 @@ html, body {
   font-size: 20px;
 }
 
+.footer .container .branches span {
+  font-size: 15px;
+  margin: 3px 0;
+}
+
+.footer .container .branches a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .container .branches a:hover {
+  border-bottom: 1px solid white;
+}
+
 .footer .container .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
