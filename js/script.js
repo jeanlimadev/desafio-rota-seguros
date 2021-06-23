@@ -1,6 +1,14 @@
 const header = document.querySelector('.header')
 const slides = document.querySelectorAll('.slide')
 const buttons = document.querySelectorAll('.button')
+const burger = document.querySelector('.burger')
+const menuMobile = document.querySelector('.menuMobile')
+
+burger.onclick = function() {
+  menuMobile.classList.toggle('actived')
+  burger.classList.toggle('actived')
+}
+
 
 window.addEventListener('scroll', () => {
   if (window.scrollY != 0) {

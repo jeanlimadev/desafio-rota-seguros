@@ -39,6 +39,7 @@ html, body {
 
   .nav {
     display: flex;
+    align-items: center;
     font-size: 18px;
     font-weight: 500;
 
@@ -68,6 +69,72 @@ html, body {
         transform: scaleX(0.9);
       }
     }
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+
+    .div1, .div2, .div3 {
+      width: 25px;
+      height: 2px;
+      background: white; 
+      margin: 5px;
+    }
+
+    &.actived {
+      transition: all 1000ms;
+
+      .div1 {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .div2 {
+        display: none;
+      }
+
+      .div3 {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.menuMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -500%;
+  width: 100%;
+  height: 200px;
+  background: rgb(12, 12, 68);
+  transition: top 500ms;
+
+  &.actived {
+    top: 0;
+    transition: top 500ms;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+
+    li {
+      margin: 10px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
   }
 }
 
@@ -120,7 +187,7 @@ html, body {
 
     &.active {
       clip-path: circle(150% at 0 50%);
-      transition: clip-path 600ms;
+      transition: clip-path 500ms;
     }
   }
 
@@ -473,4 +540,20 @@ html, body {
   bottom: 0;
   background: rgb(6, 6, 43);
   color: white;
+}
+
+@media (max-width: 1050px) {
+  .header {
+
+    .nav {
+      
+      ul {
+        display: none;
+      }
+  
+      .burger {
+        display: block;
+      }
+    }
+  }
 }
