@@ -10,7 +10,7 @@ html, body {
 
 .whats {
   position: fixed;
-  bottom: 80px;
+  bottom: 50px;
   right: 10px;
   width: 60px;
   z-index: 1000;
@@ -141,18 +141,24 @@ html, body {
 .sliderContainer {
   position: relative;
   width: 100%;
-  height: 80vh;
+  overflow: hidden;
 
   .slide {
-    z-index: 1;
-    position: absolute;
+    display: none;
+    right: -100%;
+    position: relative;
     width: 100%;
-    height: 100%;
-    clip-path: circle(0% at 0 50%);
+    max-height: 100%;
 
-    img {
+    .imgDesktop {
       width: 100%;
-      height: 100%;
+      max-height: 100%;
+    }
+
+    .imgMobile {
+      width: 100%;
+      max-height: 100%;
+      display: none;
     }
 
     .wrapper {
@@ -162,7 +168,7 @@ html, body {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100%; 
       background: rgba(0, 0, 0, 0.3);
 
       .info {
@@ -186,16 +192,18 @@ html, body {
     }
 
     &.active {
-      clip-path: circle(150% at 0 50%);
-      transition: clip-path 500ms;
+      right: 0;
+      transition: rigth 500ms;
+      display: block;
     }
+    
   }
 
   .navigation {
     z-index: 2;
     position: absolute;
     display: flex;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -225,14 +233,14 @@ html, body {
 
   .title {
     text-align: center;
-    margin: 30px;
+    margin: 20px;
     font-size: 30px;
 
     &:after {
       content: '';
       display: block;
       margin: 5px auto;
-      width: 300px;
+      width: 100px;
       height: 4px;
       background: rgb(17, 17, 156);
     }
@@ -242,7 +250,6 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     width: 100%;
 
     .type {
@@ -251,10 +258,10 @@ html, body {
       justify-content: flex-start;
       align-items: center;
       position: relative;
-      width: 30%;
+      width: 350px;
       height: 650px;
       padding: 15px;
-      margin: 0 10px;
+      margin: 10px;
       border-radius: 5px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     }
@@ -295,7 +302,7 @@ html, body {
   }
 }
 
-.car_plans{
+.swiper{
 
   .title {
     text-align: center;
@@ -306,24 +313,9 @@ html, body {
       content: '';
       display: block;
       margin: 5px auto;
-      width: 300px;
+      width: 100px;
       height: 4px;
       background: rgb(17, 17, 156);
-    }
-  }
-
-  .carousel {
-    display: flex;
-    width: 100%;
-  
-    ul {
-      display: flex;
-      overflow: hidden;
-  
-      li {
-        list-style: none;
-        margin: 10px;
-      }
     }
   }
 }
@@ -352,6 +344,9 @@ html, body {
 
   .buttons {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 10px;
 
     a {
@@ -367,7 +362,7 @@ html, body {
       cursor: pointer;
       font-size: 17px;
       padding: 5px;
-      background-color: orangered;
+      background-color: rgb(207, 97, 49);
       color: white;
 
       &:hover {
@@ -379,7 +374,6 @@ html, body {
 
 .history {
   width: 100%;
-  padding: 30px 0;
   font-family: 'Poppins', sans-serif;
 
   .title {
@@ -391,43 +385,40 @@ html, body {
       content: '';
       display: block;
       margin: 5px auto;
-      width: 300px;
+      width: 100px;
       height: 4px;
       background: rgb(17, 17, 156);
     }
   }
 
   .container {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
+    background: url('../img/quem_somos.jpg');
+    background-attachment: fixed;
 
     .text {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: absolute;
       width: 100%;
       height: 100%;
-      padding: 30px 50px;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.85);
       color: white;
     }
 
     h2 {
       margin-bottom: 10px;
       font-size: 35px;
+    }
+
+    p {
+      font-size: 20px;
     }
   }
 }
@@ -437,13 +428,12 @@ html, body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 60px;
   background: rgb(12, 12, 68);
   color: white;
 
   .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     padding: 15px 30px;
     width: 100%;
@@ -529,21 +519,12 @@ html, body {
   }
 }
 
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 60px;
-  position: fixed;
-  bottom: 0;
-  background: rgb(6, 6, 43);
-  color: white;
-}
-
 @media (max-width: 1050px) {
   .header {
+
+    .logoRota {
+      width: 250px;
+    }
 
     .nav {
       
@@ -554,6 +535,135 @@ html, body {
       .burger {
         display: block;
       }
+    }
+  }
+
+  .sliderContainer {
+
+    .slide{
+
+      .wrapper {
+  
+        .info {
+    
+          h2 {
+            font-size: 35px;
+          }
+
+          p {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+
+  .typesOfPlans {
+
+    .container {
+      flex-direction: column;
+    }
+  }
+
+  .cto {
+
+    h2 {
+      font-size: 35px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+
+  .menuMobile {
+
+    ul {
+      font-size: 17px;
+    }
+  }
+
+  .sliderContainer {
+
+    .slide{
+
+      .wrapper {
+  
+        .info {
+    
+          h2 {
+            font-size: 30px;
+          }
+
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .cto {
+
+    .buttons {
+      flex-direction: column;
+    }
+  }
+
+  .footer {
+
+    .container {
+      flex-direction: column;
+
+      .informations, .branches, .social {
+        width: 100%;
+        margin: 10px 0;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .adress, .openingHours {
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+
+  .menuMobile {
+
+    ul {
+      flex-direction: column;
+    }
+  }
+
+  .sliderContainer {
+
+    .slide {
+
+      .imgDesktop {
+        display: none;
+      }
+
+      .imgMobile {
+        display: block;
+      }
+    }
+  }
+
+  .cto {
+
+    h2 {
+      font-size: 25px;
+    }
+
+    h4 {
+      font-size: 17px;
     }
   }
 }

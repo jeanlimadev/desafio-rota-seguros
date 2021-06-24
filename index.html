@@ -7,7 +7,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style.css"><link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+
   <title>Teste Rota Seguros - Juiz de Fora</title>
 </head>
 <body>
@@ -70,34 +74,37 @@
   </header>
   <div class="sliderContainer">
     <div class="slide active">
-      <img src="./img/banner_odonto.jpg" alt="banner">
+      <img class="imgDesktop" src="./img/banner_odonto.jpg" alt="banner">
+      <img class="imgMobile" src="./img/banner_odonto_m.png" alt="banner">
       <div class="wrapper">
         <div class="info">
           <h2>Planos Odontológicos</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur natus fugiat eos delectus accusamus molestiae facilis aliquid.
+            Nunca foi tão fácil contratar um plano ondontológico. Confira!
           </p>
         </div>
       </div>
     </div>
     <div class="slide">
-      <img src="./img/banner_empresarial.jpg" alt="banner">
+      <img class="imgDesktop" src="./img/banner_empresarial.jpg" alt="banner">
+      <img class="imgMobile" src="./img/banner_empresarial_m.jpg" alt="banner">
       <div class="wrapper">
         <div class="info">
           <h2>Plano de saúde empresarial</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur natus fugiat eos delectus accusamus molestiae facilis aliquid.
+            Soluções de contratação para pequenas, médias e grandes empresas.
           </p>
         </div>
       </div>
     </div>
     <div class="slide">
-      <img src="./img/banner_individual.jpg" alt="banner">
+      <img class="imgDesktop" src="./img/banner_individual.jpg" alt="banner">
+      <img class="imgMobile" src="./img/banner_individual_m.jpg" alt="banner">
       <div class="wrapper">
         <div class="info">
           <h2>Plano de saúde individual</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur natus fugiat eos delectus accusamus molestiae facilis aliquid.
+            Os melhores planos de saúde individuais você encontra aqui.
           </p>
         </div>
       </div>
@@ -140,120 +147,115 @@
     </div>
   </section>
 
-
-
-  <section class="car_plans">
+  <section class="swiper">
     <h2 class="title">Operadoras Comercializadas</h2>
-    <div class="carousel">
-      <ul>
-        <li>
+    <!-- Swiper -->
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
           <a href="affix/affix.html"><img loading="lazy" src="img/carousel_affix.webp" alt="Affix"
-                  title="Affix" /></a>
-        </li>
-        <li>
+            title="Affix" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="allianz/index.html"><img loading="lazy" src="img/carousel_allianz.webp"
-                  alt="Allianz" title="Allianz" /></a>
-        </li>
-        <li>
+            alt="Allianz" title="Allianz" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="allcare/allcare.html"><img loading="lazy" src="img/carousel_allcare.webp"
-                  alt="AllCare Benefícios" title="AllCare Benefícios" /></a>
-        </li>
-        <li>
+            alt="AllCare Benefícios" title="AllCare Benefícios" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="amil/plano_de_saude_amil.html"><img loading="lazy" src="img/carousel_amil.webp"
-                  alt="Amil Saúde" title="Amil Saúde" /></a>
-        </li>
-        <li>
+            alt="Amil Saúde" title="Amil Saúde" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="bem-beneficios/bem-beneficios.html"><img loading="lazy"
-                  src="img/carousel_bem-beneficios.webp" alt="Bem Benefícios"
-                  title="Bem Benefícios" /></a>
-        </li>
-        <li>
+            src="img/carousel_bem-beneficios.webp" alt="Bem Benefícios"
+            title="Bem Benefícios" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="bradesco/bradesco_saude.html"><img loading="lazy" src="img/carousel_bradesco.webp"
-                  alt="Bradesco Saúde" title="Bradesco Saúde" /></a>
-        </li>
-        <li>
+            alt="Bradesco Saúde" title="Bradesco Saúde" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="caixa-odonto/index.html"><img loading="lazy" src="img/carousel_caixa.webp"
-                  alt="Caixa Saúde" title="Caixa Saúde" /></a>
-        </li>
-        <li>
+            alt="Caixa Saúde" title="Caixa Saúde" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="goldencross/golden_cross.html"><img loading="lazy" src="img/carousel_golden.webp"
-                  alt="Golden Cross" title="Golden Cross" /></a>
-            </a>
-        </li>
-        <li>
+            alt="Golden Cross" title="Golden Cross" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="good_life/good_life_saude.html"><img loading="lazy" src="img/carousel_goodlife.webp"
-                  alt="Good Life" title="Good Life" /></a>
-          </a>
-        </li>
-        <li>
+            alt="Good Life" title="Good Life" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="medsenior/index.html"><img loading="lazy" src="img/carousel_medsenior.webp"
-                  alt="MedSênior" title="MedSênior" /></a>
-        </li>
-        <li>
+            alt="MedSênior" title="MedSênior" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="metlife/institucional.html"><img loading="lazy" src="img/carousel_metlife.webp"
-                  alt="Metlife" title="Metlife" /></a>
-        </li>
-        <li>
+            alt="Metlife" title="Metlife" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="odontoprev/index.html"><img loading="lazy" src="img/carousel_odontoprev.webp"
-                  alt="Odontoprev" title="Odontoprev" /></a>
-        </li>
-        <li>
+            alt="Odontoprev" title="Odontoprev" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="premium/index.html"><img loading="lazy" src="img/carousel_premium.webp"
-                  alt="Premium Saúde" title="Premium Saúde" /></a>
-        </li>
-        <li>
+            alt="Premium Saúde" title="Premium Saúde" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="promed/promed_saude.html"><img loading="lazy" src="img/carousel_promed.webp"
-                  alt="Promed Saúde" title="Promed Saúde" /></a>
-        </li>
-        <li>
+            alt="Promed Saúde" title="Promed Saúde" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="qualicorp.html"><img loading="lazy" src="img/carousel_qualicorp.webp"
-                  alt="Qualicorp" title="Qualicorp" /></a>
-        </li>
-        <li>
+            alt="Qualicorp" title="Qualicorp" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="saude_sistema/saude_sistema.html"><img loading="lazy" src="img/carousel_saude.webp"
-                  alt="Saude Sistema" title="Saude Sistema" /></a>
-        </li>
-        <li>
+            alt="Saude Sistema" title="Saude Sistema" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="sul_america/sul_america.html"><img loading="lazy" src="img/carousel_sulamerica.webp"
-                  alt="SulAmérica Saúde" title="SulAmérica Saúde" /></a>
-        </li>
-        <li>
+            alt="SulAmérica Saúde" title="SulAmérica Saúde" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="unimed/unimed_bh.html"><img loading="lazy" src="img/carousel_unimed.webp"
-                  alt="Unimed" title="Unimed" /></a>
-        </li>
-        <li>
+            alt="Unimed" title="Unimed" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="usisaude/index.html"><img loading="lazy" src="img/carousel_usisaude.webp"
-                  alt="Usisaúde" title="Usisaúde" /></a>
-        </li>
-        <li>
+            alt="Usisaúde" title="Usisaúde" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="valem/index.html"><img loading="lazy" src="img/carousel_valem.webp"
-                  alt="Valem Administradora" title="Valem Administradora" /></a>
-        </li>
-        <li>
+            alt="Valem Administradora" title="Valem Administradora" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="vallor/index.html"><img loading="lazy" src="img/carousel_vallor.webp"
-                  alt="Vallor Administradora" title="Vallor Administradora" /></a>
-        </li>
-        <li>
+            alt="Vallor Administradora" title="Vallor Administradora" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="vitallis/vitallis.html"><img loading="lazy" src="img/carousel_vitallis.webp"
-                  alt="Vitallis" title="Vitallis" /></a>
-        </li>
-        <li>
+            alt="Vitallis" title="Vitallis" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="you-saude/index.html"><img loading="lazy" src="img/carousel_you-saude.webp"
-                  alt="You Saúde - Plano Individual e Empresarial"
-                  title="You Saúde - Plano Individual e Empresarial" /></a>
-        </li>
-        <li>
+            alt="You Saúde - Plano Individual e Empresarial"
+            title="You Saúde - Plano Individual e Empresarial" /></a>
+        </div>
+        <div class="swiper-slide">
           <a href="plural/index.html"><img loading="lazy" src="img/carousel_plural.webp"
-                  alt="Plural Administradora" title="Plural Administradora" /></a>
-        </li>
-      </ul>
+            alt="Plural Administradora" title="Plural Administradora" /></a>
+        </div>
+      </div>
+      <div class="swiper-button-next" style="color: black;"></div>
+      <div class="swiper-button-prev" style="color: black;"></div>
     </div>
-        <div class="center"> <button class="prev"><img loading="lazy" src="img/prev.png" alt="Anterior"
-                    title="anterior" /></button> <button class="next"><img loading="lazy" src="img/next.png"
-                    alt="Próximo" title="Próximo" /></button> </div>
-    </div>
-
-
+    <!--End Swiper-->
+  </section>
 
   <div class="cto">
     <h2>Precisando de um plano de saúde?</h2>
@@ -269,7 +271,6 @@
   <section class="history">
     <h2 class="title">Sobre a Rota Seguros</h2>
     <div class="container">
-      <img src="./img/quem_somos.png" alt="Rota seguros">
       <div class="text">
         <h2>Rota Seguros – O melhor em planos de Saúde está Aqui!</h2>
         <p>
@@ -314,13 +315,47 @@
     </div>
   </footer>
 
-  <div class="contact">
-    <h3>Procurando por um plano de Saúde ou odontológico?</h3>
-    <div>
-      <span>Fale com um consultor: (37) 3511-3030</span>
-    </div>
-  </div>
-
   <script src="./js/script.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 5,
+      slidesPerGroup: 1,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      breakpoints: {
+          350: {
+            slidesPerView: 2,
+          },
+          640: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 6,
+          },
+        },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
+  </script>
 </body>
 </html>
