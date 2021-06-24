@@ -467,6 +467,106 @@ html, body {
   opacity: 0.9;
 }
 
+.comparative {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.comparative .title {
+  text-align: center;
+  margin: 30px;
+  font-size: 30px;
+}
+
+.comparative .title:after {
+  content: '';
+  display: block;
+  margin: 5px auto;
+  width: 100px;
+  height: 4px;
+  background: #11119c;
+}
+
+.comparative .nav_tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: 0 auto 100px auto;
+  background-color: #fff;
+  position: relative;
+}
+
+.comparative .nav_tabs .ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.comparative .nav_tabs .tab_label {
+  display: block;
+  width: 150px;
+  background-color: #044b85;
+  padding: 10px;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.comparative .nav_tabs .rd_tab:checked ~ label {
+  background: #0c0c44;
+  color: white;
+}
+
+.comparative .nav_tabs label:hover {
+  background: #0c0c44;
+}
+
+.comparative .nav_tabs .tab-content {
+  display: none;
+  position: absolute;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  width: 100%;
+  padding: 15px;
+  left: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.comparative .nav_tabs .tab-content h2 {
+  margin: 20px 0 0 0;
+  text-align: center;
+  color: black;
+}
+
+.comparative .nav_tabs .tab-content article {
+  padding: 15px;
+}
+
+.comparative .nav_tabs .tab-content p {
+  margin: 15px;
+}
+
+.comparative .nav_tabs .tab-content ul {
+  margin-left: 30px;
+}
+
+.comparative .nav_tabs .rd_tab {
+  display: none;
+  position: absolute;
+}
+
+.comparative .rd_tab:checked ~ .tab-content {
+  display: block;
+}
+
 .history {
   width: 100%;
   font-family: 'Poppins', sans-serif;
@@ -474,7 +574,7 @@ html, body {
 
 .history .title {
   text-align: center;
-  margin: 0 0 30px 0;
+  margin: 50px 0 15px 0;
   font-size: 30px;
 }
 
@@ -534,6 +634,7 @@ html, body {
 
 .history .container p {
   font-size: 20px;
+  margin: 10px;
 }
 
 .footer {
@@ -672,6 +773,10 @@ html, body {
   margin: 5px;
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+
+.footer .container .social img:hover {
+  opacity: 0.5;
 }
 
 @media (max-width: 1050px) {

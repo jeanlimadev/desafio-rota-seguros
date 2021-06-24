@@ -4,12 +4,13 @@ const buttons = document.querySelectorAll('.button')
 const burger = document.querySelector('.burger')
 const menuMobile = document.querySelector('.menuMobile')
 
+// Função menu hambúger
 burger.onclick = function() {
   menuMobile.classList.toggle('actived')
   burger.classList.toggle('actived')
 }
 
-
+// Função de scroll (colorir header ao descer a página)
 window.addEventListener('scroll', () => {
   if (window.scrollY != 0) {
     header.classList.add('colorized')
