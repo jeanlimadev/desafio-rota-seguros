@@ -8,15 +8,22 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+/********************
+  LOGO WHATSAPP
+********************/
 .whats {
   position: fixed;
   bottom: 50px;
-  right: 10px;
-  width: 60px;
+  left: 15px;
+  width: 70px;
   z-index: 1000;
   cursor: pointer;
+  width: 60px;
 }
 
+/********************
+  HEADER
+********************/
 .header {
   display:flex;
   justify-content: space-between;
@@ -104,6 +111,9 @@ html, body {
   }
 }
 
+/********************
+  MENU MOBILE
+********************/
 .menuMobile {
   display: flex;
   justify-content: center;
@@ -138,6 +148,10 @@ html, body {
   }
 }
 
+
+/********************
+  SLIDER PRINCIPAL
+********************/
 .sliderContainer {
   position: relative;
   width: 100%;
@@ -225,6 +239,9 @@ html, body {
   }
 }
 
+/********************
+  SECTION TYPE OF PLANS
+********************/
 .typesOfPlans {
   display: flex;
   flex-direction: column;
@@ -302,6 +319,10 @@ html, body {
   }
 }
 
+
+/********************
+  CAROUSEL OPERATORS
+********************/
 .swiper{
 
   .title {
@@ -320,7 +341,9 @@ html, body {
   }
 }
 
-
+/********************
+  CALL TO ACTION
+********************/
 .cto {
   display: flex;
   align-items: center;
@@ -329,7 +352,7 @@ html, body {
   width: 100%;
   height: 400px;
   margin: 50px 0;
-  background: url('../img/call-to-action.jpg');
+  background: url('../img/call-to-action.webp');
   color: white;
 
   h2 {
@@ -372,10 +395,12 @@ html, body {
   }
 }
 
-
+/********************
+  TABS NAVIGATION
+********************/
 .comparative {
   width: 100%;
-  min-height: 100vh;
+  height: 650px;
 
   .title {
     text-align: center;
@@ -427,7 +452,7 @@ html, body {
     }
   
     .tab-content{
-      display: none;
+      opacity: 0;
       position: absolute;
       border: 1px solid rgba(128, 128, 128, 0.5);
       width: 100%;
@@ -435,6 +460,7 @@ html, body {
       left: 0;
       border-radius: 5px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transition: all 500ms;
       
       h2 {
         margin: 20px 0 0 0;
@@ -462,11 +488,14 @@ html, body {
   }
   
   .rd_tab:checked ~ .tab-content{
-    display: block;
+    opacity: 1;
+    transition: all 500ms;
   }
 }
 
-
+/********************
+  SECTION ABOUT
+********************/
 .history {
   width: 100%;
   font-family: 'Poppins', sans-serif;
@@ -492,7 +521,7 @@ html, body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background: url('../img/quem_somos.jpg');
+    background: url('../img/quem_somos.webp');
     background-attachment: fixed;
 
     .text {
@@ -519,6 +548,9 @@ html, body {
   }
 }
 
+/********************
+  FOOTER
+********************/
 .footer {
   display: flex;
   justify-content: center;
@@ -526,6 +558,12 @@ html, body {
   width: 100%;
   background: rgb(12, 12, 68);
   color: white;
+
+  .iconFooter {
+    width: 15px;
+    filter: invert(1);
+    margin-right: 3px;
+  }
 
   .container {
     display: flex;
@@ -619,6 +657,10 @@ html, body {
   }
 }
 
+
+/********************
+  MEDIA QUERY
+********************/
 @media (max-width: 1050px) {
   .header {
 
@@ -675,6 +717,10 @@ html, body {
       font-size: 20px;
     }
   }
+
+  .comparative {
+    height: 750px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -711,6 +757,10 @@ html, body {
     .buttons {
       flex-direction: column;
     }
+  }
+
+  .comparative {
+    display: none;
   }
 
   .footer {

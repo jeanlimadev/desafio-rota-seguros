@@ -9,15 +9,22 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+/********************
+  LOGO WHATSAPP
+********************/
 .whats {
   position: fixed;
   bottom: 50px;
-  right: 10px;
-  width: 60px;
+  left: 15px;
+  width: 70px;
   z-index: 1000;
   cursor: pointer;
+  width: 60px;
 }
 
+/********************
+  HEADER
+********************/
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,6 +138,9 @@ html, body {
           transform: rotate(-45deg);
 }
 
+/********************
+  MENU MOBILE
+********************/
 .menuMobile {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,6 +189,9 @@ html, body {
   color: white;
 }
 
+/********************
+  SLIDER PRINCIPAL
+********************/
 .sliderContainer {
   position: relative;
   width: 100%;
@@ -280,6 +293,9 @@ html, body {
           transform: scale(1.2, 1.2);
 }
 
+/********************
+  SECTION TYPE OF PLANS
+********************/
 .typesOfPlans {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,6 +395,9 @@ html, body {
   color: white;
 }
 
+/********************
+  CAROUSEL OPERATORS
+********************/
 .swiper .title {
   text-align: center;
   margin: 30px;
@@ -394,6 +413,9 @@ html, body {
   background: #11119c;
 }
 
+/********************
+  CALL TO ACTION
+********************/
 .cto {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,7 +433,7 @@ html, body {
   width: 100%;
   height: 400px;
   margin: 50px 0;
-  background: url("../img/call-to-action.jpg");
+  background: url("../img/call-to-action.webp");
   color: white;
 }
 
@@ -467,9 +489,12 @@ html, body {
   opacity: 0.9;
 }
 
+/********************
+  TABS NAVIGATION
+********************/
 .comparative {
   width: 100%;
-  min-height: 100vh;
+  height: 650px;
 }
 
 .comparative .title {
@@ -529,7 +554,7 @@ html, body {
 }
 
 .comparative .nav_tabs .tab-content {
-  display: none;
+  opacity: 0;
   position: absolute;
   border: 1px solid rgba(128, 128, 128, 0.5);
   width: 100%;
@@ -538,6 +563,8 @@ html, body {
   border-radius: 5px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .comparative .nav_tabs .tab-content h2 {
@@ -564,9 +591,14 @@ html, body {
 }
 
 .comparative .rd_tab:checked ~ .tab-content {
-  display: block;
+  opacity: 1;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
+/********************
+  SECTION ABOUT
+********************/
 .history {
   width: 100%;
   font-family: 'Poppins', sans-serif;
@@ -602,7 +634,7 @@ html, body {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  background: url("../img/quem_somos.jpg");
+  background: url("../img/quem_somos.webp");
   background-attachment: fixed;
 }
 
@@ -637,6 +669,9 @@ html, body {
   margin: 10px;
 }
 
+/********************
+  FOOTER
+********************/
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -650,6 +685,13 @@ html, body {
   width: 100%;
   background: #0c0c44;
   color: white;
+}
+
+.footer .iconFooter {
+  width: 15px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  margin-right: 3px;
 }
 
 .footer .container {
@@ -779,6 +821,9 @@ html, body {
   opacity: 0.5;
 }
 
+/********************
+  MEDIA QUERY
+********************/
 @media (max-width: 1050px) {
   .header .logoRota {
     width: 250px;
@@ -807,6 +852,9 @@ html, body {
   .cto h4 {
     font-size: 20px;
   }
+  .comparative {
+    height: 750px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -824,6 +872,9 @@ html, body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .comparative {
+    display: none;
   }
   .footer .container {
     -webkit-box-orient: vertical;
