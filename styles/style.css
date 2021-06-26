@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -200,7 +201,6 @@ html, body {
 
 .sliderContainer .slide {
   display: none;
-  right: -100%;
   position: relative;
   width: 100%;
   max-height: 100%;
@@ -257,9 +257,6 @@ html, body {
 }
 
 .sliderContainer .slide.active {
-  right: 0;
-  -webkit-transition: rigth 500ms;
-  transition: rigth 500ms;
   display: block;
 }
 
@@ -291,6 +288,138 @@ html, body {
           box-shadow: 0 0 10px black;
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
+}
+
+/********************
+  BANNER TABELA DE PREÇOS
+********************/
+.bannerPrincipal {
+  width: 100%;
+  position: relative;
+}
+
+.bannerPrincipal .imgDesktop {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+}
+
+.bannerPrincipal .imgMobile {
+  display: none;
+  width: 100%;
+  max-height: 100%;
+}
+
+.bannerPrincipal .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.bannerPrincipal .wrapper .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 70%;
+  margin: 50px auto;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.bannerPrincipal .wrapper .info h2 {
+  font-size: 50px;
+  letter-spacing: 1.5px;
+}
+
+.bannerPrincipal .wrapper .info p {
+  padding: 5px;
+  font-size: 30px;
+}
+
+/********************
+  SECTION APRESENTATION
+********************/
+.apresentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 50px 0;
+}
+
+.apresentation .title {
+  text-align: center;
+  margin: 20px;
+  font-size: 30px;
+}
+
+.apresentation .title:after {
+  content: '';
+  display: block;
+  margin: 5px auto;
+  width: 100px;
+  height: 4px;
+  background: #11119c;
+}
+
+.apresentation .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 20px;
+  border-radius: 5px;
+  background: #0c0c44;
+  color: white;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.apresentation .container h4 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.apresentation .container p {
+  padding: 15px;
 }
 
 /********************
@@ -398,9 +527,13 @@ html, body {
 /********************
   CAROUSEL OPERATORS
 ********************/
+.swiper {
+  margin: 20px 0 50px 0;
+}
+
 .swiper .title {
   text-align: center;
-  margin: 30px;
+  margin: 20px;
   font-size: 30px;
 }
 
@@ -411,6 +544,164 @@ html, body {
   width: 100px;
   height: 4px;
   background: #11119c;
+}
+
+/********************
+  SECTION OPERADORAS
+********************/
+.operators {
+  background: #e6e6e6;
+  padding: 20px 0;
+}
+
+/***********************************
+  CAROUSEL OPERATORS TABELA PREÇOS
+***********************************/
+.swiperPlans .title {
+  text-align: center;
+  margin: 20px;
+  font-size: 22px;
+}
+
+.swiperPlans .title:after {
+  content: '';
+  display: block;
+  margin: 5px auto;
+  width: 100px;
+  height: 4px;
+  background: #11119c;
+}
+
+.swiperPlans .swiper-slide img {
+  width: 100px;
+}
+
+.swiperPlans .swiper-slide img:hover {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.swiperPlans hr {
+  margin: 30px auto;
+  width: 90%;
+  height: 2px;
+  background: silver;
+}
+
+/********************
+ SECTION ORIENTATIONS
+********************/
+.orientations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 0 50px 0;
+  padding: 30px 0;
+  background: #0c0c44;
+  color: white;
+}
+
+.orientations .titlePrincipal {
+  text-align: center;
+  margin: 20px;
+  font-size: 30px;
+}
+
+.orientations .titlePrincipal:after {
+  content: '';
+  display: block;
+  margin: 5px auto;
+  width: 100px;
+  height: 4px;
+  background: #11119c;
+}
+
+.orientations .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+}
+
+.orientations .container .openClose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 480px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background: #e6e6e6;
+  color: black;
+}
+
+.orientations .container .openClose:hover {
+  background: #c7c7c7;
+}
+
+.orientations .container .openClose .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.orientations .container .openClose .title span {
+  margin-right: 10px;
+}
+
+.orientations .container .openClose .title span .div1, .orientations .container .openClose .title span .div2 {
+  width: 12px;
+  height: 2px;
+  background: black;
+}
+
+.orientations .container .openClose .title span .div2 {
+  -webkit-transform: rotate(90deg) translate(-2px);
+          transform: rotate(90deg) translate(-2px);
+}
+
+.orientations .container .openClose .title span .div2.open {
+  display: none;
+}
+
+.orientations .container .openClose .planInfo {
+  width: 100%;
+  display: none;
+  padding: 10px;
+  background: #e6e6e6;
+  color: black;
+}
+
+.orientations .container .openClose .planInfo.open {
+  display: block;
 }
 
 /********************
@@ -432,7 +723,7 @@ html, body {
           flex-direction: column;
   width: 100%;
   height: 400px;
-  margin: 50px 0;
+  margin: 0 0 50px 0;
   background: url("../img/call-to-action.webp");
   color: white;
 }
@@ -636,6 +927,7 @@ html, body {
   width: 100%;
   background: url("../img/quem_somos.webp");
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .history .container .text {
@@ -846,6 +1138,9 @@ html, body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .orientations .container .openClose {
+    width: 100%;
+  }
   .cto h2 {
     font-size: 35px;
   }
@@ -866,6 +1161,17 @@ html, body {
   }
   .sliderContainer .slide .wrapper .info p {
     font-size: 15px;
+  }
+  .bannerPrincipal .wrapper .info {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .bannerPrincipal .wrapper .info h2 {
+    font-size: 35px;
+  }
+  .bannerPrincipal .wrapper .info p {
+    padding: 5px;
+    font-size: 25px;
   }
   .cto .buttons {
     -webkit-box-orient: vertical;
@@ -913,6 +1219,12 @@ html, body {
     display: none;
   }
   .sliderContainer .slide .imgMobile {
+    display: block;
+  }
+  .bannerPrincipal .imgDesktop {
+    display: none;
+  }
+  .bannerPrincipal .imgMobile {
     display: block;
   }
   .cto h2 {

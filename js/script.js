@@ -3,6 +3,20 @@ const slides = document.querySelectorAll('.slide')
 const buttons = document.querySelectorAll('.button')
 const burger = document.querySelector('.burger')
 const menuMobile = document.querySelector('.menuMobile')
+const btnOpenClose = document.querySelectorAll('.openClose')
+const divPlus = document.querySelectorAll('.openClose .div2')
+const planInfo = document.querySelectorAll('.planInfo')
+
+
+btnOpenClose.forEach((btn, i) => {
+  btn.onclick = function() {
+    planInfo[i].classList.toggle('open')
+    divPlus[i].classList.toggle('open')
+  }
+})
+
+
+
 
 // Função menu hambúger
 burger.onclick = function() {
