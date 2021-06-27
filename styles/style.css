@@ -45,6 +45,8 @@ html, body {
 
 .header.colorized {
   background: #0c0c44;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
   -webkit-transition: all 1000ms;
   transition: all 1000ms;
 }
@@ -557,13 +559,13 @@ html, body {
 /***********************************
   CAROUSEL OPERATORS TABELA PREÇOS
 ***********************************/
-.swiperPlans .title {
+.swiperPlans .title, .plans .title {
   text-align: center;
   margin: 20px;
   font-size: 22px;
 }
 
-.swiperPlans .title:after {
+.swiperPlans .title:after, .plans .title:after {
   content: '';
   display: block;
   margin: 5px auto;
@@ -572,20 +574,44 @@ html, body {
   background: #11119c;
 }
 
-.swiperPlans .swiper-slide img {
+.swiperPlans .swiper-slide img, .plans .swiper-slide img {
   width: 100px;
 }
 
-.swiperPlans .swiper-slide img:hover {
+.swiperPlans .swiper-slide img:hover, .plans .swiper-slide img:hover {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
 
-.swiperPlans hr {
+.swiperPlans hr, .plans hr {
   margin: 30px auto;
   width: 90%;
   height: 2px;
   background: silver;
+}
+
+.plans .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.plans img {
+  width: 100px;
+  margin: 10px;
+}
+
+.plans img:hover {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 /********************
@@ -641,6 +667,14 @@ html, body {
   width: 90%;
 }
 
+.orientations .container .openClose:not(:last-child) {
+  margin: 5px;
+}
+
+.orientations .container .openClose:last-child {
+  margin: 0 5px;
+}
+
 .orientations .container .openClose {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -650,15 +684,18 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 480px;
-  margin: 5px;
   padding: 5px;
   border-radius: 5px;
-  background: #e6e6e6;
+  background: #bebebe;
+  background: -webkit-gradient(linear, left bottom, left top, from(#bebebe), to(#aaaaaa));
+  background: linear-gradient(360deg, #bebebe 0%, #aaaaaa 100%);
   color: black;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .orientations .container .openClose:hover {
-  background: #c7c7c7;
+  opacity: 0.9;
 }
 
 .orientations .container .openClose .title {
@@ -696,8 +733,10 @@ html, body {
   width: 100%;
   display: none;
   padding: 10px;
-  background: #e6e6e6;
+  background: white;
   color: black;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .orientations .container .openClose .planInfo.open {
@@ -772,7 +811,9 @@ html, body {
   cursor: pointer;
   font-size: 17px;
   padding: 5px;
-  background-color: #cf6131;
+  background: #d03f00;
+  background: -webkit-gradient(linear, left bottom, left top, from(#d03f00), to(#cf6131));
+  background: linear-gradient(360deg, #d03f00 0%, #cf6131 100%);
   color: white;
 }
 
@@ -1137,6 +1178,9 @@ html, body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .orientations .container .left, .orientations .container .rigth {
+    width: 100%;
   }
   .orientations .container .openClose {
     width: 100%;

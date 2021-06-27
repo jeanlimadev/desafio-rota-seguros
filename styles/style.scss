@@ -36,6 +36,7 @@ html, body {
 
   &.colorized {
     background: rgb(12, 12, 68);
+    box-shadow: 0 0 5px black;
     transition: all 1000ms;
   }
 
@@ -455,7 +456,7 @@ html, body {
 /***********************************
   CAROUSEL OPERATORS TABELA PREÇOS
 ***********************************/
-.swiperPlans{
+.swiperPlans, .plans{
   
   .title {
     text-align: center;
@@ -488,6 +489,25 @@ html, body {
     width: 90%;
     height: 2px;
     background: silver;
+  }
+}
+
+.plans {
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  img {
+    width: 100px;
+    margin: 10px;
+
+    &:hover {
+      filter: grayscale(1);
+    }
   }
 }
 
@@ -527,18 +547,27 @@ html, body {
     flex-wrap: wrap;
     width: 90%;
 
+    .openClose:not(:last-child) {
+      margin: 5px;
+    }
+
+    .openClose:last-child {
+      margin: 0 5px;
+    }
+
     .openClose {
       display: flex;
       flex-direction: column;
       width: 480px;
-      margin: 5px;
       padding: 5px;
       border-radius: 5px;
-      background: rgb(230, 230, 230);
+      background: rgb(190,190,190);
+      background: linear-gradient(360deg, rgba(190,190,190,1) 0%, rgba(170,170,170,1) 100%);
       color: black;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
       &:hover {
-        background: rgb(199, 199, 199);
+        opacity: 0.9;
       }
 
       .title {
@@ -569,8 +598,9 @@ html, body {
         width: 100%;
         display: none;
         padding: 10px;
-        background: rgb(230, 230, 230);
+        background: white;
         color: black;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   
         &.open {
           display: block;
@@ -625,7 +655,8 @@ html, body {
       cursor: pointer;
       font-size: 17px;
       padding: 5px;
-      background-color: rgb(207, 97, 49);
+      background: rgb(208,63,0);
+      background: linear-gradient(360deg, rgba(208,63,0,1) 0%, rgba(207,97,49,1) 100%);
       color: white;
 
       &:hover {
@@ -951,6 +982,10 @@ html, body {
   .orientations {
   
     .container {
+
+      .left, .rigth {
+        width: 100%;
+      }
   
       .openClose {
         width: 100%;
